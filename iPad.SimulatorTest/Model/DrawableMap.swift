@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Drawing: ObservableObject{
+class DrawableMap: ObservableObject {
     @Published var rectangles: Array<DrawRect> = Array()
     @Published var selectedRectangle: DrawRect? = nil
     

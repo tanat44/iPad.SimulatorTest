@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @ObservedObject var mySimulator: Simulator = Simulator.Create()
+    @StateObject var setting: SimulatorSetting = SimulatorSetting()
+    @StateObject var simulator: Simulator = Simulator.Create()
+    @StateObject var map: DrawableMap = DrawableMap()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
-            VStack {
-                Button("Add Vehicle") {
-                    mySimulator.vehicles.append(Vehicle())
+            HStack {
+                Button("Add") {
+                    simulator.vehicles.append(Vehicle())
                 }
-                .foregroundColor(.white)
-                .background(Color.brown)
+                Button("Random") {
+                    simulator.randomVehiclePosition(size: setting.size)
+                }
                 Button("Deselect") {
-                    
+                    map.selectedRectangle = nil
                 }
-                
-                
 //                Text(mySimulator.description)
             }
             .padding()
             .onAppear{
-                print(mySimulator)
+                print(simulator)
             }
 //            .onReceive(timer) { time in
 //                mySimulator.advanceTime(timeInSec: 1.1)
 //            }
             Divider()
-            DrawView()
+            DrawView(map: map, simulator: simulator).environmentObject(setting)
         }
     }
 }

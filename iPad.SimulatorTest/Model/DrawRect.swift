@@ -15,14 +15,14 @@ class DrawRect: ObservableObject, Identifiable{
         self.rect = rect
     }
     
-    func drawRect() -> Path {
-            var path = Path()
+    func draw() -> Path {
+        var path = Path()
         path.move(to: CGPoint(x: rect.maxX, y: rect.minY))
-            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-            path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
-            path.closeSubpath()
-            return path
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.closeSubpath()
+        return path
     }
     
 //    static func fixMinusSize(r: inout CGRect, origin: CGPoint){

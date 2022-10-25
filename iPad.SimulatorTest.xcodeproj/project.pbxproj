@@ -14,7 +14,7 @@
 		1C89594228F4B639005617DC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89594128F4B639005617DC /* Vehicle.swift */; };
 		1C8959462907ED24005617DC /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959452907ED24005617DC /* DrawView.swift */; };
 		1C8959482907EE5E005617DC /* DrawRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959472907EE5E005617DC /* DrawRect.swift */; };
-		1C89594A2907EF20005617DC /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959492907EF20005617DC /* Drawing.swift */; };
+		1C89594A2907EF20005617DC /* DrawableMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959492907EF20005617DC /* DrawableMap.swift */; };
 		1C89594D29080E21005617DC /* iPad_SimulatorTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89594C29080E21005617DC /* iPad_SimulatorTestApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		1C89594128F4B639005617DC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		1C8959452907ED24005617DC /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = iPad.SimulatorTest/View/DrawView.swift; sourceTree = SOURCE_ROOT; };
 		1C8959472907EE5E005617DC /* DrawRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRect.swift; sourceTree = "<group>"; };
-		1C8959492907EF20005617DC /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		1C8959492907EF20005617DC /* DrawableMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableMap.swift; sourceTree = "<group>"; };
 		1C89594C29080E21005617DC /* iPad_SimulatorTestApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 				1C89593E28F4A305005617DC /* Simulator.swift */,
 				1C89594128F4B639005617DC /* Vehicle.swift */,
 				1C8959472907EE5E005617DC /* DrawRect.swift */,
-				1C8959492907EF20005617DC /* Drawing.swift */,
+				1C8959492907EF20005617DC /* DrawableMap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C89594228F4B639005617DC /* Vehicle.swift in Sources */,
-				1C89594A2907EF20005617DC /* Drawing.swift in Sources */,
+				1C89594A2907EF20005617DC /* DrawableMap.swift in Sources */,
 				1C8959462907ED24005617DC /* DrawView.swift in Sources */,
 				1C89591728F1988D005617DC /* ContentView.swift in Sources */,
 				1C8959482907EE5E005617DC /* DrawRect.swift in Sources */,

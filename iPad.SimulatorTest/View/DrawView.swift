@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DrawView: View {
-    @ObservedObject var drawing: Drawing = Drawing()
+    @EnvironmentObject var setting: SimulatorSetting
+    @ObservedObject var map: DrawableMap
+    @ObservedObject var simulator: Simulator
     @State var drawingRect: CGRect? = nil
     @State var drawingOrigin: CGPoint? = nil
     
@@ -39,52 +41,75 @@ struct DrawView: View {
             })
             .onEnded({ value in
                 //                    Rectangle.fixMinusSize(r: &(drawingRect!))
-                drawing.addRectangle(newRectangle: drawingRect!)
+                map.addRectangle(newRectangle: drawingRect!)
                 drawingRect = nil
                 drawingOrigin = nil
             })
     }
     
+    func makeCanvas(_ geometry: GeometryProxy) -> some View {
+        
+        
+//        DispatchQueue.main.async { self.frame = geometry.size }
+        
+        return Canvas { context, size in
+            if let rect = drawingRect {
+                context.stroke( Path.init(rect), with: .color(.orange))
+            }
+        }
+    }
     var body: some View {
         ZStack{
-            ForEach(drawing.rectangles) { rect in
-                rect.drawRect()
-            }
-            Rectangle()
-                .fill(.mint)
-                .frame(width: 10, height: 10)
-            Canvas { context, size in
-                if let rect = drawingRect {
-                    context.stroke( Path.init(rect), with: .color(.orange))
-                }
-                
-                for r in drawing.rectangles {
-                    if let selection = drawing.selectedRectangle {
-                        if selection === r {
-                            context.fill( Path.init(r.rect), with: .color(.gray))
-                        }
+            GeometryReader{ geometry in
+                Canvas { context, size in
+                    if let rect = drawingRect {
+                        context.stroke( Path.init(rect), with: .color(.orange))
                     }
-                    context.stroke( Path.init(r.rect), with: .color(.gray))
+                }.onAppear{
+                    setting.size = geometry.size
                 }
-                
             }
+            
+            // Draw map
+            ForEach(map.rectangles) { rect in
+                let color: Color = rect === map.selectedRectangle ? .mint : .yellow
+                
+                rect.draw()
+                    .fill(color)
+                    .onTapGesture(count: 1){
+                        map.selectedRectangle = rect
+                    }
+            }
+            
+            // Draw Vehicle
+            ForEach(simulator.vehicles) { v in
+                v.draw()
+            }
+            
         }
         .frame(
             maxHeight: .infinity
         )
-        .border(.blue)
-        .gesture(
-            SpatialTapGesture(count:1, coordinateSpace: .local)
-            .onEnded({ value in
-                print(value)
-            })
-            .simultaneously(with: dragHandler)
-        )
+        .border(.gray)
+        .simultaneousGesture(dragHandler)
     }
 }
 
 struct DrawView_Previews: PreviewProvider {
+    static let map = DrawableMap()
+    static let simulator = Simulator()
+    
     static var previews: some View {
-        DrawView()
+        DrawView(map: map, simulator: simulator)
     }
 }
+
+// DRAW RECTANGLE USING CANVAS
+//                for r in drawing.rectangles {
+//                    if let selection = drawing.selectedRectangle {
+//                        if selection === r {
+//                            context.fill( Path.init(r.rect), with: .color(.gray))
+//                        }
+//                    }
+//                    context.stroke( Path.init(r.rect), with: .color(.gray))
+//                }
