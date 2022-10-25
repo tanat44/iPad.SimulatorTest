@@ -7,61 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C89591528F1988D005617DC /* iPad_SimulatorTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89591428F1988D005617DC /* iPad_SimulatorTestApp.swift */; };
 		1C89591728F1988D005617DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89591628F1988D005617DC /* ContentView.swift */; };
 		1C89591928F1988E005617DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C89591828F1988E005617DC /* Assets.xcassets */; };
 		1C89591C28F1988E005617DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C89591B28F1988E005617DC /* Preview Assets.xcassets */; };
-		1C89592628F1988E005617DC /* iPad_SimulatorTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89592528F1988E005617DC /* iPad_SimulatorTestTests.swift */; };
-		1C89593028F1988E005617DC /* iPad_SimulatorTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89592F28F1988E005617DC /* iPad_SimulatorTestUITests.swift */; };
-		1C89593228F1988E005617DC /* iPad_SimulatorTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89593128F1988E005617DC /* iPad_SimulatorTestUITestsLaunchTests.swift */; };
+		1C89593F28F4A305005617DC /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89593E28F4A305005617DC /* Simulator.swift */; };
+		1C89594228F4B639005617DC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89594128F4B639005617DC /* Vehicle.swift */; };
+		1C8959462907ED24005617DC /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959452907ED24005617DC /* DrawView.swift */; };
+		1C8959482907EE5E005617DC /* DrawRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959472907EE5E005617DC /* DrawRect.swift */; };
+		1C89594A2907EF20005617DC /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8959492907EF20005617DC /* Drawing.swift */; };
+		1C89594D29080E21005617DC /* iPad_SimulatorTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89594C29080E21005617DC /* iPad_SimulatorTestApp.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1C89592228F1988E005617DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C89590928F1988D005617DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C89591028F1988D005617DC;
-			remoteInfo = iPad.SimulatorTest;
-		};
-		1C89592C28F1988E005617DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C89590928F1988D005617DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C89591028F1988D005617DC;
-			remoteInfo = iPad.SimulatorTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C89591128F1988D005617DC /* iPad.SimulatorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPad.SimulatorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C89591428F1988D005617DC /* iPad_SimulatorTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestApp.swift; sourceTree = "<group>"; };
 		1C89591628F1988D005617DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1C89591828F1988E005617DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C89591B28F1988E005617DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1C89592128F1988E005617DC /* iPad.SimulatorTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPad.SimulatorTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C89592528F1988E005617DC /* iPad_SimulatorTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestTests.swift; sourceTree = "<group>"; };
-		1C89592B28F1988E005617DC /* iPad.SimulatorTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPad.SimulatorTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C89592F28F1988E005617DC /* iPad_SimulatorTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestUITests.swift; sourceTree = "<group>"; };
 		1C89593128F1988E005617DC /* iPad_SimulatorTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C89593E28F4A305005617DC /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
+		1C89594128F4B639005617DC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		1C8959452907ED24005617DC /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = iPad.SimulatorTest/View/DrawView.swift; sourceTree = SOURCE_ROOT; };
+		1C8959472907EE5E005617DC /* DrawRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRect.swift; sourceTree = "<group>"; };
+		1C8959492907EF20005617DC /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		1C89594C29080E21005617DC /* iPad_SimulatorTestApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPad_SimulatorTestApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1C89590E28F1988D005617DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C89591E28F1988E005617DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C89592828F1988E005617DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				1C89591128F1988D005617DC /* iPad.SimulatorTest.app */,
-				1C89592128F1988E005617DC /* iPad.SimulatorTestTests.xctest */,
-				1C89592B28F1988E005617DC /* iPad.SimulatorTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +66,9 @@
 		1C89591328F1988D005617DC /* iPad.SimulatorTest */ = {
 			isa = PBXGroup;
 			children = (
-				1C89591428F1988D005617DC /* iPad_SimulatorTestApp.swift */,
-				1C89591628F1988D005617DC /* ContentView.swift */,
+				1C89594C29080E21005617DC /* iPad_SimulatorTestApp.swift */,
+				1C89594B29080DC6005617DC /* View */,
+				1C89594028F4B622005617DC /* Model */,
 				1C89591828F1988E005617DC /* Assets.xcassets */,
 				1C89591A28F1988E005617DC /* Preview Content */,
 			);
@@ -127,6 +100,26 @@
 			path = iPad.SimulatorTestUITests;
 			sourceTree = "<group>";
 		};
+		1C89594028F4B622005617DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C89593E28F4A305005617DC /* Simulator.swift */,
+				1C89594128F4B639005617DC /* Vehicle.swift */,
+				1C8959472907EE5E005617DC /* DrawRect.swift */,
+				1C8959492907EF20005617DC /* Drawing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C89594B29080DC6005617DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C89591628F1988D005617DC /* ContentView.swift */,
+				1C8959452907ED24005617DC /* DrawView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,42 +140,6 @@
 			productReference = 1C89591128F1988D005617DC /* iPad.SimulatorTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1C89592028F1988E005617DC /* iPad.SimulatorTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C89593828F1988E005617DC /* Build configuration list for PBXNativeTarget "iPad.SimulatorTestTests" */;
-			buildPhases = (
-				1C89591D28F1988E005617DC /* Sources */,
-				1C89591E28F1988E005617DC /* Frameworks */,
-				1C89591F28F1988E005617DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1C89592328F1988E005617DC /* PBXTargetDependency */,
-			);
-			name = iPad.SimulatorTestTests;
-			productName = iPad.SimulatorTestTests;
-			productReference = 1C89592128F1988E005617DC /* iPad.SimulatorTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1C89592A28F1988E005617DC /* iPad.SimulatorTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C89593B28F1988E005617DC /* Build configuration list for PBXNativeTarget "iPad.SimulatorTestUITests" */;
-			buildPhases = (
-				1C89592728F1988E005617DC /* Sources */,
-				1C89592828F1988E005617DC /* Frameworks */,
-				1C89592928F1988E005617DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1C89592D28F1988E005617DC /* PBXTargetDependency */,
-			);
-			name = iPad.SimulatorTestUITests;
-			productName = iPad.SimulatorTestUITests;
-			productReference = 1C89592B28F1988E005617DC /* iPad.SimulatorTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +152,6 @@
 				TargetAttributes = {
 					1C89591028F1988D005617DC = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					1C89592028F1988E005617DC = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 1C89591028F1988D005617DC;
-					};
-					1C89592A28F1988E005617DC = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 1C89591028F1988D005617DC;
 					};
 				};
 			};
@@ -220,8 +169,6 @@
 			projectRoot = "";
 			targets = (
 				1C89591028F1988D005617DC /* iPad.SimulatorTest */,
-				1C89592028F1988E005617DC /* iPad.SimulatorTestTests */,
-				1C89592A28F1988E005617DC /* iPad.SimulatorTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,20 +183,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C89591F28F1988E005617DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C89592928F1988E005617DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,42 +190,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C89594228F4B639005617DC /* Vehicle.swift in Sources */,
+				1C89594A2907EF20005617DC /* Drawing.swift in Sources */,
+				1C8959462907ED24005617DC /* DrawView.swift in Sources */,
 				1C89591728F1988D005617DC /* ContentView.swift in Sources */,
-				1C89591528F1988D005617DC /* iPad_SimulatorTestApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C89591D28F1988E005617DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C89592628F1988E005617DC /* iPad_SimulatorTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C89592728F1988E005617DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C89593028F1988E005617DC /* iPad_SimulatorTestUITests.swift in Sources */,
-				1C89593228F1988E005617DC /* iPad_SimulatorTestUITestsLaunchTests.swift in Sources */,
+				1C8959482907EE5E005617DC /* DrawRect.swift in Sources */,
+				1C89593F28F4A305005617DC /* Simulator.swift in Sources */,
+				1C89594D29080E21005617DC /* iPad_SimulatorTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1C89592328F1988E005617DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C89591028F1988D005617DC /* iPad.SimulatorTest */;
-			targetProxy = 1C89592228F1988E005617DC /* PBXContainerItemProxy */;
-		};
-		1C89592D28F1988E005617DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C89591028F1988D005617DC /* iPad.SimulatorTest */;
-			targetProxy = 1C89592C28F1988E005617DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1C89593328F1988E005617DC /* Debug */ = {
@@ -465,78 +373,6 @@
 			};
 			name = Release;
 		};
-		1C89593928F1988E005617DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tanut.iPad-SimulatorTestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPad.SimulatorTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPad.SimulatorTest";
-			};
-			name = Debug;
-		};
-		1C89593A28F1988E005617DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tanut.iPad-SimulatorTestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPad.SimulatorTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPad.SimulatorTest";
-			};
-			name = Release;
-		};
-		1C89593C28F1988E005617DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tanut.iPad-SimulatorTestUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iPad.SimulatorTest;
-			};
-			name = Debug;
-		};
-		1C89593D28F1988E005617DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tanut.iPad-SimulatorTestUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iPad.SimulatorTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,24 +390,6 @@
 			buildConfigurations = (
 				1C89593628F1988E005617DC /* Debug */,
 				1C89593728F1988E005617DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C89593828F1988E005617DC /* Build configuration list for PBXNativeTarget "iPad.SimulatorTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C89593928F1988E005617DC /* Debug */,
-				1C89593A28F1988E005617DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C89593B28F1988E005617DC /* Build configuration list for PBXNativeTarget "iPad.SimulatorTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C89593C28F1988E005617DC /* Debug */,
-				1C89593D28F1988E005617DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
