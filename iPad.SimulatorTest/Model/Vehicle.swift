@@ -28,11 +28,4 @@ class Vehicle: CustomStringConvertible, ObservableObject, Identifiable {
         output += name
         return output
     }
-    
-    func draw() -> Path {
-        var path = Path()
-        path.addArc(center: CGPoint(x: position.x, y: position.y), radius: 10, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 360), clockwise: true)
-
-        return path
-    }
 }

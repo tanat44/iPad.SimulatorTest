@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class DrawRect: ObservableObject, Identifiable{
+class DrawableRect: ObservableObject, Identifiable{
     @Published var rect: CGRect = CGRect()
     
     init(rect: CGRect) {

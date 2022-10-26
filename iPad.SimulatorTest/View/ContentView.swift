@@ -11,31 +11,65 @@ struct ContentView: View {
     @StateObject var setting: SimulatorSetting = SimulatorSetting()
     @StateObject var simulator: Simulator = Simulator.Create()
     @StateObject var map: DrawableMap = DrawableMap()
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
+            
+            // VEHICLE
             HStack {
-                Button("Add") {
-                    simulator.vehicles.append(Vehicle())
+                Text("Vehicle")
+                    .frame(alignment: .leading)
+                HStack{
+                    Button("Add") {
+                        simulator.vehicles.append(Vehicle())
+                    }
+                    Button("Random") {
+                        simulator.randomVehiclePosition()
+                    }
+                    Button("Print"){
+                        print(simulator.description)
+                    }
                 }
-                Button("Random") {
-                    simulator.randomVehiclePosition(size: setting.size)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }.padding()
+            Divider()
+            
+            // DRAWING
+            HStack{
+                Text("Drawing")
+                    .frame(alignment: .leading)
+                HStack{
+                    Button("Deselect") {
+                        map.selectedRectangle = nil
+                    }
                 }
-                Button("Deselect") {
-                    map.selectedRectangle = nil
-                }
-//                Text(mySimulator.description)
+                .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .padding()
-            .onAppear{
-                print(simulator)
+            
+            // SIMULATOR
+            HStack{
+                Text("Simulator")
+                    .frame(alignment: .leading)
+                HStack{
+                    Button("Target") {
+                        simulator.randomTarget()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
             }
+            .padding()
+            
 //            .onReceive(timer) { time in
 //                mySimulator.advanceTime(timeInSec: 1.1)
 //            }
             Divider()
             DrawView(map: map, simulator: simulator).environmentObject(setting)
+        }.onAppear{
+            simulator.map = map
+            simulator.setting = setting
         }
     }
 }

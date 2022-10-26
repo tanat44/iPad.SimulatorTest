@@ -9,6 +9,8 @@ import Foundation
 
 class Simulator: CustomStringConvertible, ObservableObject, Identifiable{
     @Published var vehicles: Array<Vehicle> = Array()
+    var map: DrawableMap? = nil
+    var setting: SimulatorSetting? = nil
     
     static func Create() -> Simulator {
         let sim = Simulator()
@@ -22,11 +24,33 @@ class Simulator: CustomStringConvertible, ObservableObject, Identifiable{
         print("Advancing by \(time)")
     }
     
-    func randomVehiclePosition(size: CGSize) {
+    func randomVehiclePosition() {
+        let w = setting?.canvasSize.width
+        let h = setting?.canvasSize.height
+        
         for v in vehicles {
-            var x = Double.random(in: 0 ..< size.width)
-            var y = Double.random(in: 0.0 ..< size.height)
+            let x = Double.random(in: 0 ..< Double(w!))
+            let y = Double.random(in: 0 ..< Double(h!))
             v.position = SIMD3<Double>(x: x, y: y, z: 0)
+            
+            // render
+            let dot = DrawableDot(_dotType: DrawableDot.DotType.vehicle, _position: CGPoint(x: x, y: y))
+            map?.updateDot(id: v.name, newDot: dot)
+        }
+    }
+    
+    func randomTarget(){
+        let w = setting?.canvasSize.width
+        let h = setting?.canvasSize.height
+        
+        
+        for v in vehicles {
+            let x = Double.random(in: 0 ..< Double(w!))
+            let y = Double.random(in: 0 ..< Double(h!))
+            
+            // render
+            let dot = DrawableDot(_dotType: DrawableDot.DotType.destination, _position: CGPoint(x: x, y: y))
+            map?.updateDot(id: v.name + "_target", newDot: dot)
         }
     }
     
@@ -39,6 +63,6 @@ class Simulator: CustomStringConvertible, ObservableObject, Identifiable{
     }
 }
 
-class SimulatorSetting: ObservableObject{
-    @Published var size: CGSize = CGSize()
+class SimulatorSetting: ObservableObject {
+    @Published var canvasSize: CGSize = CGSize()
 }

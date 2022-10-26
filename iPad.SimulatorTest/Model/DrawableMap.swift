@@ -7,16 +7,25 @@
 
 import Foundation
 
-
 class DrawableMap: ObservableObject {
-    @Published var rectangles: Array<DrawRect> = Array()
-    @Published var selectedRectangle: DrawRect? = nil
+    
+    @Published var rectangles: Array<DrawableRect> = Array()
+    @Published var selectedRectangle: DrawableRect? = nil
+    @Published var dots = [String: DrawableDot]()
     
     func addRectangle(newRectangle rect: CGRect){
-        rectangles.append(DrawRect(rect: rect))
+        rectangles.append(DrawableRect(rect: rect))
     }
     
-    func checkHit() -> DrawRect? {
+    func checkHit() -> DrawableRect? {
         return nil
+    }
+    
+    func updateDot(id: String, newDot: DrawableDot) {
+        dots[id] = newDot
+    }
+    
+    func removeDot(id: String) {
+        dots.removeValue(forKey: id)
     }
 }

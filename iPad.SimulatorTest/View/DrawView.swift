@@ -14,6 +14,8 @@ struct DrawView: View {
     @State var drawingRect: CGRect? = nil
     @State var drawingOrigin: CGPoint? = nil
     
+    let dict = ["key1": "value1", "key2": "value2"]
+    
     var dragHandler: some Gesture { DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onChanged({ value in
                 if drawingOrigin == nil {
@@ -66,7 +68,7 @@ struct DrawView: View {
                         context.stroke( Path.init(rect), with: .color(.orange))
                     }
                 }.onAppear{
-                    setting.size = geometry.size
+                    setting.canvasSize = geometry.size
                 }
             }
             
@@ -81,11 +83,10 @@ struct DrawView: View {
                     }
             }
             
-            // Draw Vehicle
-            ForEach(simulator.vehicles) { v in
-                v.draw()
+            // Draw dot
+            ForEach(map.dots.sorted(by: >), id: \.key) { key, drawableDot in
+                drawableDot.draw()
             }
-            
         }
         .frame(
             maxHeight: .infinity
